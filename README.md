@@ -5,6 +5,8 @@ Set the clinical programming environment and extract titles foot column headings
     Set the clinical programming environment and extract titles foot column headings from mocks
 
     This is under development
+    
+    Will be ading the SDTM, RAW, ADaM datasets,
 
     /****************************************************************************************************************************/
     /*                                                                                                                          */
