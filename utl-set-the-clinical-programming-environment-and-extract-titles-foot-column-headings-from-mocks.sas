@@ -1,5 +1,7 @@
 %let pgm=utl-set-the-clinical-programming-environment-and-extract-titles-foot-column-headings-from-mocks;
 
+%let pgm=utl-set-the-clinical-programming-environment-and-extract-titles-foot-column-headings-from-mocks;
+
 Set the clinical programming environment and extract titles foot column headings from mocks
 
 This is under development
@@ -112,35 +114,35 @@ This is under development
 /* Frequently this meta data can be used for arguments to standard macros.                                                  */
 /*                                                                                                                          */
 /* Here is an example of what th output window might look like.                                                             */
-/*                    _   _     _                      _                                                                    */                                                                                                                                         */
-/*   _   _ ___  ___  | |_| |__ (_)___   _ __ ___   ___| |_ __ _                                                             */                                                                                                                                         */
-/*  | | | / __|/ _ \ | __| `_ \| / __| | `_ ` _ \ / _ \ __/ _` |                                                            */                                                                                                                                         */
-/*  | |_| \__ \  __/ | |_| | | | \__ \ | | | | | |  __/ || (_| |                                                            */                                                                                                                                         */
-/*   \__,_|___/\___|  \__|_| |_|_|___/ |_| |_| |_|\___|\__\__,_|                                                            */                                                                                                                                         */
-/*              _                     _                   _                                                                 */                                                                                                                                         */
-/*    ___ _   _| |_    __ _ _ __   __| |  _ __   __ _ ___| |_ ___                                                           */                                                                                                                                         */
-/*   / __| | | | __|  / _` | `_ \ / _` | | `_ \ / _` / __| __/ _ \                                                          */                                                                                                                                         */
-/*  | (__| |_| | |_  | (_| | | | | (_| | | |_) | (_| \__ \ ||  __/                                                          */                                                                                                                                         */
-/*   \___|\__,_|\__|  \__,_|_| |_|\__,_| | .__/ \__,_|___/\__\___|                                                          */                                                                                                                                         */
-/*                                       |_|                                                                                */                                                                                                                                         */
-/* abc_050Ldsp Protocol: ABC Pharmaceuticals                                                               Page 1 of n      */                                                                                                                              */
-/* abc_050Ldsp Population: All Subjects                                                                                     */                                                                                                                                         */
-/* abc_050Ldsp Template 1                                                                                                   */                                                                                                                                         */
-/* abc_050Ldsp Summary of Populations[1]                                                                                    */                                                                                                                                         */
-/* abc_050Ldsp Xanomeline      Xanomeline                                                                                   */                                                                                                                                         */
-/* abc_050Ldsp                            Placebo       Low Dose        High Dose        Total                              */                                                                                                                                                                    */
-/* abc_050Ldsp Population                 (N=xxx)        (N=xxx)         (N=xxx)        (N=xxx)                             */                                                                                                                                         */
-/* abc_050Ldsp Intent-To-Treat (ITT)     xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */                                                                                                                                         */
-/* abc_050Ldsp Safety                    xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */                                                                                                                                         */
-/* abc_050Ldsp Efficacy                  xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */                                                                                                                                         */
-/* abc_050Ldsp Completer Week 24         xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */                                                                                                                                         */
-/* abc_050Ldsp Complete Study            xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */                                                                                                                                         */
-/* abc_050Ldsp [1] Phase I Intravenous Infusion                                                                             */                                                                                                                                         */
-/* abc_050Ldsp NOTE: N in column headers represents number of subjects the in study (i.e., signed informed consent). The    */                                                                                                                                     */
-/* abc_050Ldsp ITT population includes all subjects randomized. The Safety population includes all randomized subjects      */                                                                                                                                    */
-/* abc_050Ldsp to have taken at least one dose of the study drug. The Efficacy population includes all subjects in the      */                                                                                                                                 */
-/* abc_050Ldsp safety population who also have at least one post-baseline ADAS-Cog and CIBIC+ assessment.                   */                                                                                                                                        */
-/* abc_050Ldsp Source: p:/abc/abc_050Ldsp.sas                                                 21:05 Monday, June 26, 2006   */                                                                                                                      */
+/*                    _   _     _                      _                                                                    */
+/*   _   _ ___  ___  | |_| |__ (_)___   _ __ ___   ___| |_ __ _                                                             */
+/*  | | | / __|/ _ \ | __| `_ \| / __| | `_ ` _ \ / _ \ __/ _` |                                                            */
+/*  | |_| \__ \  __/ | |_| | | | \__ \ | | | | | |  __/ || (_| |                                                            */
+/*   \__,_|___/\___|  \__|_| |_|_|___/ |_| |_| |_|\___|\__\__,_|                                                            */
+/*              _                     _                   _                                                                 */
+/*    ___ _   _| |_    __ _ _ __   __| |  _ __   __ _ ___| |_ ___                                                           */
+/*   / __| | | | __|  / _` | `_ \ / _` | | `_ \ / _` / __| __/ _ \                                                          */
+/*  | (__| |_| | |_  | (_| | | | | (_| | | |_) | (_| \__ \ ||  __/                                                          */
+/*   \___|\__,_|\__|  \__,_|_| |_|\__,_| | .__/ \__,_|___/\__\___|                                                          */
+/*                                       |_|                                                                                */
+/* abc_050Ldsp Protocol: ABC Pharmaceuticals                                                               Page 1 of n      */
+/* abc_050Ldsp Population: All Subjects                                                                                     */
+/* abc_050Ldsp Template 1                                                                                                   */
+/* abc_050Ldsp Summary of Populations[1]                                                                                    */
+/* abc_050Ldsp Xanomeline      Xanomeline                                                                                   */
+/* abc_050Ldsp                            Placebo       Low Dose        High Dose        Total                              */
+/* abc_050Ldsp Population                 (N=xxx)        (N=xxx)         (N=xxx)        (N=xxx)                             */
+/* abc_050Ldsp Intent-To-Treat (ITT)     xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
+/* abc_050Ldsp Safety                    xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
+/* abc_050Ldsp Efficacy                  xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
+/* abc_050Ldsp Completer Week 24         xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
+/* abc_050Ldsp Complete Study            xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
+/* abc_050Ldsp [1] Phase I Intravenous Infusion                                                                             */
+/* abc_050Ldsp NOTE: N in column headers represents number of subjects the in study (i.e., signed informed consent). The    */
+/* abc_050Ldsp ITT population includes all subjects randomized. The Safety population includes all randomized subjects      */
+/* abc_050Ldsp to have taken at least one dose of the study drug. The Efficacy population includes all subjects in the      */
+/* abc_050Ldsp safety population who also have at least one post-baseline ADAS-Cog and CIBIC+ assessment.                   */
+/* abc_050Ldsp Source: p:/abc/abc_050Ldsp.sas                                                 21:05 Monday, June 26, 2006   */
 /*                  _                                                                                                       */
 /*    ___ _ __   __| |                                                                                                      */
 /*   / _ \ `_ \ / _` |                                                                                                      */
@@ -794,10 +796,3 @@ run;quit;
     ,debug        = 1                /* set to 0 for production                                         */
     ,mocks        = d:\abc\doc\abc_mocks.docx /* location of mocks */
     );
-
-
-
-
-
-
-
