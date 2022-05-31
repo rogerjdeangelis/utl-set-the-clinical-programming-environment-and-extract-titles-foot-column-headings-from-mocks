@@ -16,8 +16,8 @@
     /*                                                                                                                          */
     /* TRIAL:                   ABC-217                                                                                         */
     /*                                                                                                                          */
-    /* DEVELOPMENT SOFTWARE;    Development: local 64bit Win 10 Pro Workstation SAS 9\4M7 64bit R4.12 64\32bit  Python 3.10.2   */
-    /* PRODUCTION SOFTWARE;     Production 64bit Windows Server SAS 9\4M7 64bit (R and Python not meeded)                       */
+    /* DEVELOPMENT SOFTWARE:    Development: local 64bit Win 10 Pro Workstation SAS 9\4M7 64bit R4.12 64\32bit  Python 3.10.2   */
+    /* PRODUCTION SOFTWARE:     Production 64bit Windows Server SAS 9\4M7 64bit (R and Python not meeded)                       */
     /*                                                                                                                          */
     /* PROGRAMMER:              RogerJDeAngelis@gmail.com                                                                       */
     /*                                                                                                                          */
@@ -36,7 +36,7 @@
     /* DEVELOPMENT PATH:        d:\abc                                                                                          */
     /* PRODUCTION PATH :        AWS:\abc (development version is MOVED to production-only one environment is active at any time)*/
     /*                                                                                                                          */
-    /* MOCKS;                   d:\doc\abc_moc.docx  (production AWS:\abc)                                                      */
+    /* MOCKS:                   d:\doc\abc_moc.docx  (production AWS:\abc)                                                      */
     /*                                                                                                                          */
     /* ISSUE LOG:               d:\abc\xls\abc_050Ldsp.xlsx (production AWS:\abc)                                               */
     /*                                                                                                                          */
@@ -85,7 +85,7 @@
     /*   \ adsl.sas7bdat      \   /       \ / /          |                                                                      */
     /*                         \ |         | /           \ adc_050Ldsp.rtf                                                      */
     /*                          -| PROCESS |/                                                                                   */
-    /*  .\oto  <-----------<-----|         |--------> First time you run sbc_000init it will create these folders               */
+    /*  .\oto  <-----------<-----|         |--------> First time you run abc_000init it will create these folders               */
     /*     abc000init.sas         \_______ /                                                                                    */
     /*                            /                    .\b64   -->  Base 64 encoding for binary exports                         */
     /*            .\doc   <-----./                     .\cdm   -->  Common Data Model All meta data Question Answer             */
