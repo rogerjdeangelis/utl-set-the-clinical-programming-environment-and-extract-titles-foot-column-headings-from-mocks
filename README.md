@@ -105,7 +105,7 @@
     /*                                                 .\xml   -->  Define XML                                                  */
     /*                                                 .\xpt   -->  SAS V5 transport files                                      */
     /*                                                 .\zip   -->  Zip files                                                   */
-    /*                                                                                                                          */
+    /*                                                 .\msg   -->  key emails                                                  */
     /* KEY PRINT OUTPUT WHEN ARGUMENT META=1                                                                                    */
     /*                                                                                                                          */
     /* This init program can parse the mock listings for titles, footnotes and columnm headings.                                */
@@ -437,7 +437,7 @@
            /*-- create directories that do not exist alread --*/
 
            /*-- create macro array --*/
-           %array(_dirs,values=adm b64 cdm csv doc fmt log lst oto pdf png raw rtf sd1 sas sdm txt usr xls xml xpt zip);
+           %array(_dirs,values=adm b64 cdm csv doc fmt log lst msg pdf png raw rtf sd1 sas sdm txt usr xls xml xpt zip);
 
            data _null_;
                 %do_over(_dirs,phrase=%str(
