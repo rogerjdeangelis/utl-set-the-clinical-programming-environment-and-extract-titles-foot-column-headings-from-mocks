@@ -106,7 +106,7 @@ This is under development
 /*                                                 .\xml   -->  Define XML                                                  */
 /*                                                 .\xpt   -->  SAS V5 transport files                                      */
 /*                                                 .\zip   -->  Zip files                                                   */
-/*                                                                                                                          */
+/*                                                 .\msg   -->  Key emails                                                  */
 /* KEY PRINT OUTPUT WHEN ARGUMENT META=1                                                                                    */
 /*                                                                                                                          */
 /* This init program can parse the mock listings for titles, footnotes and columnm headings.                                */
@@ -438,7 +438,7 @@ __      _____  _ __| | _(_)_ __   __ _   / _| ___ | | __| | ___ _ __
        /*-- create directories that do not exist alread --*/
 
        /*-- create macro array --*/
-       %array(_dirs,values=adm b64 cdm csv doc fmt log lst oto pdf png raw rtf sd1 sas sdm txt usr xls xml xpt zip);
+       %array(_dirs,values=adm b64 cdm csv doc fmt log lst msg oto pdf png raw rtf sd1 sas sdm txt usr xls xml xpt zip);
 
        data _null_;
             %do_over(_dirs,phrase=%str(
