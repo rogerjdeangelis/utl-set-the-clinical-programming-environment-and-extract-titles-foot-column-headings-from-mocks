@@ -4,63 +4,69 @@
     Set the clinical programming environment and extract titles foot column headings from mocks
 
     This is under development
+    /****************************************************************************************************************************/ 
+    /*                                                                                                                          */ 
+    /* Study token=abc                                                                                                          */ 
+    /*                                                                                                                          */ 
+    /* PROGRAM:                 abc_000Init.sas                                                                                 */ 
+    /* PROGRAM PATH:            d:/abc/oto/   (production AWS:/abc)                                                             */ 
+    /*                                                                                                                          */ 
+    /* PURPOSE:                 Create Programming Enviromment for ABC-217 Trial mRNAGen Incorporated                           */ 
+    /*                                                                                                                          */ 
+    /* TRIAL:                   ABC-217                                                                                         */ 
+    /*                                                                                                                          */ 
+    /* DEVELOPMENT SOFTWARE:    Development: local 64bit Win 10 Pro Workstation SAS 9\4M7 64bit R4.12 64\32bit  Python 3.10.2   */ 
+    /* PRODUCTION SOFTWARE:     Production 64bit Windows Server SAS 9\4M7 64bit (R and Python not meeded)                       */ 
+    /*                                                                                                                          */ 
+    /* PROGRAMMER:              RogerJDeAngelis@gmail.com                                                                       */ 
+    /*                                                                                                                          */ 
+    /* VERSIONING:              d:\abc\ver (production AWS:\abc\ver)                                                            */ 
+    /*                                                                                                                          */ 
+    /* REQUESTOR:               mRNAGen Pharmaceiticals Inc                                                                     */ 
+    /*                                                                                                                          */ 
+    /* AUTOCALL MACRO LIBRARY:  d:abc\oto   (production AWS:\abc\oto)                                                           */ 
+    /*                                                                                                                          */ 
+    /* VALIDATED:               YES                                                                                             */ 
+    /*                                                                                                                          */ 
+    /* RISK LEVEL:              High                                                                                            */ 
+    /*                                                                                                                          */ 
+    /* VALIDATION PGM:          d:\abc\sas\abs_000initV.sas (production AWS:\abc)                                               */ 
+    /*                                                                                                                          */ 
+    /* DEVELOPMENT PATH:        d:\abc                                                                                          */ 
+    /* PRODUCTION PATH :        AWS:\abc (development version is MOVED to production-only one environment is active at any time)*/ 
+    /*                                                                                                                          */ 
+    /* MOCKS:                   d:\doc\abc_moc.docx  (production AWS:\abc)                                                      */ 
+    /*                                                                                                                          */ 
+    /* SAP:                     AWS:/abc/pdf/abc_sap.pdf                                                                        */ 
+    /*                                                                                                                          */ 
+    /* PROTOCOL:                AWS:/abc/protocol/abc_prtocol.pdf                                                               */ 
+    /*                                                                                                                          */ 
+    /* aCRFs;                   AWS:/abc/protocol/abc_crf.pdf                                                                   */ 
+    /*                                                                                                                          */ 
+    /* ISSUE LOG:               d:\abc\xls\abc_050Ldsp.xlsx (production AWS:\abc)                                               */ 
+    /*                                                                                                                          */ 
+    /* DEPENDENCIES:            The Curent working Directory must be either development d:/abc or production AWS:/abc           */ 
+    /*                          See sample inputs below used to produce Subject Dispsition Listing with this init               */ 
+    /*                                                                                                                          */ 
+    /* VALIDATION:              Done by John Smith johnSmith@mRNAGen.com                                                        */ 
+    /*                          All standard macros go through this testing                                                     */ 
+    /*                          User Requirements                                                                               */ 
+    /*                          Funntional Requirements                                                                         */ 
+    /*                          Unit Test Plans                                                                                 */ 
+    /*                          Configuration Management Requirements                                                           */ 
+    /*                          Unit Test Plans and Test Cases                                                                  */ 
+    /*                          can be found in                                                                                 */ 
+    /*                             d\abc\pdf\abc_000init_validation.pdf (production AWS:\abc\pdf\abc_000init_validation.pdf)    */ 
+    /*                                                                                                                          */ 
+    /* R PACKAGES:              tm pdftools (these tools parse the mocks and are not used in production)                        */ 
+    /*                                                                                                                          */ 
+    /* EXTERNAL MACROS:         %utlnopts, %utlopts, %stop_submission, %utl_curDir, %array, %do_over %utl_submit_r64            */ 
+    /*                          %utl_submit_ps64 %arraydelete                                                                   */ 
+    /*                                                                                                                          */ 
+    /* INTERNAL MACROS:         %abc_000init                                                                                    */ 
+    /*                                                                                                                          */ 
+    /****************************************************************************************************************************/ 
 
-    /****************************************************************************************************************************/
-    /*                                                                                                                          */
-    /* Study token=abc                                                                                                          */
-    /*                                                                                                                          */
-    /* PROGRAM:                 abc_000Init.sas                                                                                 */
-    /* PROGRAM PATH:            d:/abc/oto/   (production AWS:/abc)                                                             */
-    /*                                                                                                                          */
-    /* PURPOSE:                 Create Programming Enviromment for ABC-217 Trial mRNAGen Incorporated                           */
-    /*                                                                                                                          */
-    /* TRIAL:                   ABC-217                                                                                         */
-    /*                                                                                                                          */
-    /* DEVELOPMENT SOFTWARE:    Development: local 64bit Win 10 Pro Workstation SAS 9\4M7 64bit R4.12 64\32bit  Python 3.10.2   */
-    /* PRODUCTION SOFTWARE:     Production 64bit Windows Server SAS 9\4M7 64bit (R and Python not meeded)                       */
-    /*                                                                                                                          */
-    /* PROGRAMMER:              RogerJDeAngelis@gmail.com                                                                       */
-    /*                                                                                                                          */
-    /* VERSIONING:              d;\abc\ver (production AWS:\abc\ver)                                                            */
-    /*                                                                                                                          */
-    /* REQUESTOR:               mRNAGen Pharmaceiticals Inc                                                                     */
-    /*                                                                                                                          */
-    /* AUTOCALL MACRO LIBRARY:  d:abc\oto   (production AWS:\abc\oto)                                                           */
-    /*                                                                                                                          */
-    /* VALIDATED:               YES                                                                                             */
-    /*                                                                                                                          */
-    /* RISK LEVEL:              High                                                                                            */
-    /*                                                                                                                          */
-    /* VALIDATION PGM:          d:\abc\sas\abs_000initV.sas (production AWS:\abc)                                               */
-    /*                                                                                                                          */
-    /* DEVELOPMENT PATH:        d:\abc                                                                                          */
-    /* PRODUCTION PATH :        AWS:\abc (development version is MOVED to production-only one environment is active at any time)*/
-    /*                                                                                                                          */
-    /* MOCKS:                   d:\doc\abc_moc.docx  (production AWS:\abc)                                                      */
-    /*                                                                                                                          */
-    /* ISSUE LOG:               d:\abc\xls\abc_050Ldsp.xlsx (production AWS:\abc)                                               */
-    /*                                                                                                                          */
-    /* DEPENDENCIES:            The Curent working Directory must be either development d:/abc or production AWS:/abc           */
-    /*                          See sample inputs below used to produce Subject Dispsition Listing with this init               */
-    /*                                                                                                                          */
-    /* VALIDATION:              Done by John Smith johnSmith@mRNAGen.com                                                        */
-    /*                          All standard macros go through this testing                                                     */
-    /*                          User Requirements                                                                               */
-    /*                          Funntional Requirements                                                                         */
-    /*                          Unit Test Plans                                                                                 */
-    /*                          Configuration Management Requirements                                                           */
-    /*                          Unit Test Plans and Test Cases                                                                  */
-    /*                          can be found in                                                                                 */
-    /*                             d\abc\pdf\abc_000init_validation.pdf (production AWS:\abc\pdf\abc_000init_validation.pdf)    */
-    /*                                                                                                                          */
-    /* R PACKAGES:              tm pdftools (these tools parse the mocks and are not used in production)                        */
-    /*                                                                                                                          */
-    /* EXTERNAL MACROS:         %utlnopts, %utlopts, %stop_submission, %utl_curDir, %array, %do_over %utl_submit_r64            */
-    /*                          %utl_submit_ps64 %arraydelete                                                                   */
-    /*                                                                                                                          */
-    /* INTERNAL MACROS:         %abc_000init                                                                                    */
-    /*                                                                                                                          */
-    /****************************************************************************************************************************/
     /*                                                                              _               _                           */
     /*   _                   _      _ __  _ __ ___   ___ ___  ___ ___    ___  _   _| |_ _ __  _   _| |_                         */
     /*  (_)_ __  _ __  _   _| |_   | `_ \| `__/ _ \ / __/ _ \/ __/ __|  / _ \| | | | __| `_ \| | | | __|                        */
