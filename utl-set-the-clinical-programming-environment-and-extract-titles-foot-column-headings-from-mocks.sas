@@ -5,7 +5,6 @@
 Set the clinical programming environment and extract titles foot column headings from mocks
 
 This is under development
-
 /****************************************************************************************************************************/
 /*                                                                                                                          */
 /* Study token=abc                                                                                                          */
@@ -17,12 +16,12 @@ This is under development
 /*                                                                                                                          */
 /* TRIAL:                   ABC-217                                                                                         */
 /*                                                                                                                          */
-/* DEVELOPMENT SOFTWARE;    Development: local 64bit Win 10 Pro Workstation SAS 9\4M7 64bit R4.12 64\32bit  Python 3.10.2   */
-/* PRODUCTION SOFTWARE;     Production 64bit Windows Server SAS 9\4M7 64bit (R and Python not meeded)                       */
+/* DEVELOPMENT SOFTWARE:    Development: local 64bit Win 10 Pro Workstation SAS 9\4M7 64bit R4.12 64\32bit  Python 3.10.2   */
+/* PRODUCTION SOFTWARE:     Production 64bit Windows Server SAS 9\4M7 64bit (R and Python not meeded)                       */
 /*                                                                                                                          */
 /* PROGRAMMER:              RogerJDeAngelis@gmail.com                                                                       */
 /*                                                                                                                          */
-/* VERSIONING:              d;\abc\ver (production AWS:\abc\ver)                                                            */
+/* VERSIONING:              d:\abc\ver (production AWS:\abc\ver)                                                            */
 /*                                                                                                                          */
 /* REQUESTOR:               mRNAGen Pharmaceiticals Inc                                                                     */
 /*                                                                                                                          */
@@ -37,7 +36,13 @@ This is under development
 /* DEVELOPMENT PATH:        d:\abc                                                                                          */
 /* PRODUCTION PATH :        AWS:\abc (development version is MOVED to production-only one environment is active at any time)*/
 /*                                                                                                                          */
-/* MOCKS;                   d:\doc\abc_moc.docx  (production AWS:\abc)                                                      */
+/* MOCKS:                   d:\doc\abc_moc.docx  (production AWS:\abc)                                                      */
+/*                                                                                                                          */
+/* SAP:                     AWS:/abc/pdf/abc_sap.pdf                                                                        */
+/*                                                                                                                          */
+/* PROTOCOL:                AWS:/abc/protocol/abc_prtocol.pdf                                                               */
+/*                                                                                                                          */
+/* aCRFs;                   AWS:/abc/protocol/abc_crf.pdf                                                                   */
 /*                                                                                                                          */
 /* ISSUE LOG:               d:\abc\xls\abc_050Ldsp.xlsx (production AWS:\abc)                                               */
 /*                                                                                                                          */
@@ -62,6 +67,7 @@ This is under development
 /* INTERNAL MACROS:         %abc_000init                                                                                    */
 /*                                                                                                                          */
 /****************************************************************************************************************************/
+
 /*                                                                              _               _                           */
 /*   _                   _      _ __  _ __ ___   ___ ___  ___ ___    ___  _   _| |_ _ __  _   _| |_                         */
 /*  (_)_ __  _ __  _   _| |_   | `_ \| `__/ _ \ / __/ _ \/ __/ __|  / _ \| | | | __| `_ \| | | | __|                        */
