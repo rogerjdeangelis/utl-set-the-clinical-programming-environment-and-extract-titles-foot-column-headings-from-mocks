@@ -40,6 +40,8 @@ This is under development
 /*                                                                                                                          */
 /* SAP:                     AWS:/abc/pdf/abc_sap.pdf                                                                        */
 /*                                                                                                                          */
+/* SPEC:                     AWS:/abc/doc/abc_spec.pdf                                                                      */ 
+/*                                                                                                                          */ 
 /* PROTOCOL:                AWS:/abc/protocol/abc_prtocol.pdf                                                               */
 /*                                                                                                                          */
 /* aCRFs;                   AWS:/abc/protocol/abc_crf.pdf                                                                   */
