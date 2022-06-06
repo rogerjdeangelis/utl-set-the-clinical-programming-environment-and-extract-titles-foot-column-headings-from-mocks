@@ -37,7 +37,7 @@
     /*                                                                                                                          */ 
     /* MOCKS:                   d:\doc\abc_moc.docx  (production AWS:\abc)                                                      */ 
     /*                                                                                                                          */ 
-    /* SAP:                     AWS:/abc/pdf/abc_sap.pdf                                                                        */ 
+    /* SPEC:                     AWS:/abc/doc/abc_spec.pdf                                                                      */ 
     /*                                                                                                                          */ 
     /* PROTOCOL:                AWS:/abc/protocol/abc_prtocol.pdf                                                               */ 
     /*                                                                                                                          */ 
