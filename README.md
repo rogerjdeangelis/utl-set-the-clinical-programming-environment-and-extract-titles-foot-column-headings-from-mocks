@@ -26,6 +26,8 @@
     /*                                                                                                                          */ 
     /* AUTOCALL MACRO LIBRARY:  d:abc\oto   (production AWS:\abc\oto)                                                           */ 
     /*                                                                                                                          */ 
+    /* FORMATS:                 d:abc\fmt\abcFmt.sas7bdat                                                                       */
+    /*                                                                                                                          */ 
     /* VALIDATED:               YES                                                                                             */ 
     /*                                                                                                                          */ 
     /* RISK LEVEL:              High                                                                                            */ 
