@@ -4,71 +4,69 @@
     Set the clinical programming environment and extract titles foot column headings from mocks
 
     This is under development
-    /****************************************************************************************************************************/ 
-    /*                                                                                                                          */ 
-    /* Study token=abc                                                                                                          */ 
-    /*                                                                                                                          */ 
-    /* PROGRAM:                 abc_000Init.sas                                                                                 */ 
-    /* PROGRAM PATH:            d:/abc/oto/   (production AWS:/abc)                                                             */ 
-    /*                                                                                                                          */ 
-    /* PURPOSE:                 Create Programming Enviromment for ABC-217 Trial mRNAGen Incorporated                           */ 
-    /*                                                                                                                          */ 
-    /* TRIAL:                   ABC-217                                                                                         */ 
-    /*                                                                                                                          */ 
-    /* DEVELOPMENT SOFTWARE:    Development: local 64bit Win 10 Pro Workstation SAS 9\4M7 64bit R4.12 64\32bit  Python 3.10.2   */ 
-    /* PRODUCTION SOFTWARE:     Production 64bit Windows Server SAS 9\4M7 64bit (R and Python not meeded)                       */ 
-    /*                                                                                                                          */ 
-    /* PROGRAMMER:              RogerJDeAngelis@gmail.com                                                                       */ 
-    /*                                                                                                                          */ 
-    /* VERSIONING:              d:\abc\ver (production AWS:\abc\ver)                                                            */ 
-    /*                                                                                                                          */ 
-    /* REQUESTOR:               mRNAGen Pharmaceiticals Inc                                                                     */ 
-    /*                                                                                                                          */ 
-    /* AUTOCALL MACRO LIBRARY:  d:abc\oto   (production AWS:\abc\oto)                                                           */ 
-    /*                                                                                                                          */ 
-    /* FORMATS:                 d:abc\fmt\abcFmt.sas7bdat                                                                       */
-    /*                                                                                                                          */ 
-    /* VALIDATED:               YES                                                                                             */ 
-    /*                                                                                                                          */ 
-    /* RISK LEVEL:              High                                                                                            */ 
-    /*                                                                                                                          */ 
-    /* VALIDATION PGM:          d:\abc\sas\abs_000initV.sas (production AWS:\abc)                                               */ 
-    /*                                                                                                                          */ 
-    /* DEVELOPMENT PATH:        d:\abc                                                                                          */ 
-    /* PRODUCTION PATH :        AWS:\abc (development version is MOVED to production-only one environment is active at any time)*/ 
-    /*                                                                                                                          */ 
-    /* MOCKS:                   d:\doc\abc_moc.docx  (production AWS:\abc)                                                      */ 
-    /*                                                                                                                          */ 
-    /* SPEC:                     AWS:/abc/doc/abc_spec.pdf                                                                      */ 
-    /*                                                                                                                          */ 
-    /* PROTOCOL:                AWS:/abc/protocol/abc_prtocol.pdf                                                               */ 
-    /*                                                                                                                          */ 
-    /* aCRFs;                   AWS:/abc/protocol/abc_crf.pdf                                                                   */ 
-    /*                                                                                                                          */ 
-    /* ISSUE LOG:               d:\abc\xls\abc_050Ldsp.xlsx (production AWS:\abc)                                               */ 
-    /*                                                                                                                          */ 
-    /* DEPENDENCIES:            The Curent working Directory must be either development d:/abc or production AWS:/abc           */ 
-    /*                          See sample inputs below used to produce Subject Dispsition Listing with this init               */ 
-    /*                                                                                                                          */ 
-    /* VALIDATION:              Done by John Smith johnSmith@mRNAGen.com                                                        */ 
-    /*                          All standard macros go through this testing                                                     */ 
-    /*                          User Requirements                                                                               */ 
-    /*                          Funntional Requirements                                                                         */ 
-    /*                          Unit Test Plans                                                                                 */ 
-    /*                          Configuration Management Requirements                                                           */ 
-    /*                          Unit Test Plans and Test Cases                                                                  */ 
-    /*                          can be found in                                                                                 */ 
-    /*                          d\abc\pdf\abc_000init_validation.pdf (production AWS:\abc\pdf\abc_000init_validation.pdf)       */ 
-    /*                                                                                                                          */ 
-    /* R PACKAGES:              tm pdftools (these tools parse the mocks and are not used in production)                        */ 
-    /*                                                                                                                          */ 
-    /* EXTERNAL MACROS:         %utlnopts, %utlopts, %stop_submission, %utl_curDir, %array, %do_over %utl_submit_r64            */ 
-    /*                          %utl_submit_ps64 %arraydelete                                                                   */ 
-    /*                                                                                                                          */ 
-    /* INTERNAL MACROS:         %abc_000init                                                                                    */ 
-    /*                                                                                                                          */ 
-    /****************************************************************************************************************************/ 
-
+    /****************************************************************************************************************************/
+    /*                                                                                                                          */
+    /* Study token=abc                                                                                                          */
+    /*                                                                                                                          */
+    /* PROGRAM                : abc_000Init.sas                                                                                 */
+    /* PROGRAM PATH           : d:/abc/oto/   (production AWS:/abc)                                                             */
+    /*                                                                                                                          */
+    /* PURPOSE                : Create Programming Enviromment for ABC-217 Trial mRNAGen Incorporated                           */
+    /*                                                                                                                          */
+    /* TRIAL                  : ABC-217                                                                                         */
+    /*                                                                                                                          */
+    /* DEVELOPMENT SOFTWARE   : Development: local 64bit Win 10 Pro Workstation SAS 9.4M7 64bit R4.12 64\32bit  Python 3.10.2   */
+    /* PRODUCTION SOFTWARE    : Production 64bit Windows Server SAS 9\4M7 64bit (R and Python not meeded)                       */
+    /*                                                                                                                          */
+    /* PROGRAMMER             : RogerJDeAngelis@gmail.com                                                                       */
+    /*                                                                                                                          */
+    /* VERSIONING             : d:\abc\ver (production AWS:\abc\ver)                                                            */
+    /*                                                                                                                          */
+    /* REQUESTOR              : mRNAGen Pharmaceiticals Inc                                                                     */
+    /*                                                                                                                          */
+    /* AUTOCALL MACRO LIBRARY : d:abc\oto   (production AWS:\abc\oto)                                                           */
+    /*                                                                                                                          */
+    /* FORMATS                : d:abc\fmt\abcFmt.sas7bdat                                                                       */
+    /*                                                                                                                          */
+    /* VALIDATED              : YES                                                                                             */
+    /*                                                                                                                          */
+    /* RISK LEVEL             : High                                                                                            */
+    /*                                                                                                                          */
+    /* VALIDATION PGM         : d:\abc\sas\abs_000initV.sas (production AWS:\abc)                                               */
+    /*                                                                                                                          */
+    /* DEVELOPMENT PATH       : d:\abc                                                                                          */
+    /* PRODUCTION PATH        : AWS:\abc (development version is MOVED to production-only one environment is active at any time)*/
+    /*                                                                                                                          */
+    /* MOCKS                  : d:\doc\abc_moc.docx  (production AWS:\abc)                                                      */
+    /*                                                                                                                          */
+    /* SPEC                   : AWS:/abc/doc/abc_spec.pdf                                                                       */
+    /*                                                                                                                          */
+    /* PROTOCOL               : AWS:/abc/protocol/abc_prtocol.pdf                                                               */
+    /*                                                                                                                          */
+    /* aCRFs;                 : AWS:/abc/protocol/abc_crf.pdf                                                                   */
+    /*                                                                                                                          */
+    /* ISSUE LOG              : d:\abc\xls\abc_050Ldsp.xlsx (production AWS:\abc)                                               */
+    /*                                                                                                                          */
+    /* DEPENDENCIES           : The Curent working Directory must be either development d:/abc or production AWS:/abc           */
+    /*                          See sample inputs below used to produce Subject Dispsition Listing with this init               */
+    /*                                                                                                                          */
+    /* VALIDATION             : Done by John Smith johnSmith@mRNAGen.com                                                        */
+    /*                        : All standard macros go through this testing                                                     */
+    /*                        : User Requirements                                                                               */
+    /*                        : Funntional Requirements                                                                         */
+    /*                        : Unit Test Plans                                                                                 */
+    /*                        : Configuration Management Requirements                                                           */
+    /*                        : Documentation can be found in                                                                   */
+    /*                        : d\abc\pdf\abc_000init_validation.pdf (production AWS:\abc\pdf\abc_000init_validation.pdf)       */
+    /*                                                                                                                          */
+    /* R PACKAGES             : tm pdftools (these tools parse the mocks and are not used in production)                        */
+    /*                                                                                                                          */
+    /* EXTERNAL MACROS        : %utlnopts, %utlopts, %stop_submission, %utl_curDir, %array, %do_over %utl_submit_r64            */
+    /*                          %utl_submit_ps64 %arraydelete                                                                   */
+    /*                                                                                                                          */
+    /* INTERNAL MACROS        : %abc_000init                                                                                    */
+    /*                                                                                                                          */
+    /****************************************************************************************************************************/
     /*                                                                              _               _                           */
     /*   _                   _      _ __  _ __ ___   ___ ___  ___ ___    ___  _   _| |_ _ __  _   _| |_                         */
     /*  (_)_ __  _ __  _   _| |_   | `_ \| `__/ _ \ / __/ _ \/ __/ __|  / _ \| | | | __| `_ \| | | | __|                        */
@@ -77,17 +75,16 @@
     /*  |_|_| |_| .__/ \__,_|\__|  |_|                                                 |_|                                      */
     /*          |_|                                                                                                             */
     /*                                                                                                                          */
-    /* ROOT = d:/abc (production AWS:/abc)                                                                                      */
-    /*                                                                                                                          */
-    /* Minimal setup to demonstrate using  abc_00init.sas along with abc_050Ldsp.sas to create the disposition listing          */
+    /* Minimal setup to demonstrate using  abc_00init.sas along with abc_050ldsp.sas to create the disposition listing          */
     /*                                                                                                                          */
     /* You need to manually create                                                                                              */
-    /* these folders and populate them for an intial run                                                                        */
+    /* these folders and populate them with the data input                                                                     */
     /*                                                                                                                          */
+    /* ROOT = d:/abc (production AWS:/abc)                                                                                      */
     /*                                                                                                                          */
     /*  .\sas  <-------------.                   .--->  .\log                                                                   */
     /*   |                    \                 /        |                                                                      */
-    /*   \ abc_050Ldsp.sas     \               /         \ abc_050Ldsp.log                                                      */
+    /*   \ abc_050ldsp.sas     \               /         \ abc_050Ldsp.log                                                      */
     /*                          \             /                                                                                 */
     /*  .\adam <-------------.   \  _____    / .---->.\rtf                                                                      */
     /*   \ adsl.sas7bdat      \   /       \ / /          |                                                                      */
@@ -112,49 +109,8 @@
     /*                                                 .\xls   -->  All excel Files, Issue log, specs drives all processing     */
     /*                                                 .\xml   -->  Define XML                                                  */
     /*                                                 .\xpt   -->  SAS V5 transport files                                      */
-    /*                                                 .\zip   -->  Zip files                                                   */
     /*                                                 .\msg   -->  key emails                                                  */
-    /* KEY PRINT OUTPUT WHEN ARGUMENT META=1                                                                                    */
-    /*                                                                                                                          */
-    /* This init program can parse the mock listings for titles, footnotes and columnm headings.                                */
-    /* The meta data appears in the output window and can easily be cut and pasted in to table, listing or report program.      */
-    /* Frequently this meta data can be used for arguments to standard macros.                                                  */
-    /*                                                                                                                          */
-    /* Here is an example of what th output window might look like.                                                             */
-    /*                    _   _     _                      _                                                                    */
-    /*   _   _ ___  ___  | |_| |__ (_)___   _ __ ___   ___| |_ __ _                                                             */
-    /*  | | | / __|/ _ \ | __| `_ \| / __| | `_ ` _ \ / _ \ __/ _` |                                                            */
-    /*  | |_| \__ \  __/ | |_| | | | \__ \ | | | | | |  __/ || (_| |                                                            */
-    /*   \__,_|___/\___|  \__|_| |_|_|___/ |_| |_| |_|\___|\__\__,_|                                                            */
-    /*              _                     _                   _                                                                 */
-    /*    ___ _   _| |_    __ _ _ __   __| |  _ __   __ _ ___| |_ ___                                                           */
-    /*   / __| | | | __|  / _` | `_ \ / _` | | `_ \ / _` / __| __/ _ \                                                          */
-    /*  | (__| |_| | |_  | (_| | | | | (_| | | |_) | (_| \__ \ ||  __/                                                          */
-    /*   \___|\__,_|\__|  \__,_|_| |_|\__,_| | .__/ \__,_|___/\__\___|                                                          */
-    /*                                       |_|                                                                                */
-    /* abc_050Ldsp Protocol: ABC Pharmaceuticals                                                               Page 1 of n      */
-    /* abc_050Ldsp Population: All Subjects                                                                                     */
-    /* abc_050Ldsp Template 1                                                                                                   */
-    /* abc_050Ldsp Summary of Populations[1]                                                                                    */
-    /* abc_050Ldsp Xanomeline      Xanomeline                                                                                   */
-    /* abc_050Ldsp                            Placebo       Low Dose        High Dose        Total                              */
-    /* abc_050Ldsp Population                 (N=xxx)        (N=xxx)         (N=xxx)        (N=xxx)                             */
-    /* abc_050Ldsp Intent-To-Treat (ITT)     xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
-    /* abc_050Ldsp Safety                    xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
-    /* abc_050Ldsp Efficacy                  xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
-    /* abc_050Ldsp Completer Week 24         xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
-    /* abc_050Ldsp Complete Study            xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
-    /* abc_050Ldsp [1] Phase I Intravenous Infusion                                                                             */
-    /* abc_050Ldsp NOTE: N in column headers represents number of subjects the in study (i.e., signed informed consent). The    */
-    /* abc_050Ldsp ITT population includes all subjects randomized. The Safety population includes all randomized subjects      */
-    /* abc_050Ldsp to have taken at least one dose of the study drug. The Efficacy population includes all subjects in the      */
-    /* abc_050Ldsp safety population who also have at least one post-baseline ADAS-Cog and CIBIC+ assessment.                   */
-    /* abc_050Ldsp Source: p:/abc/abc_050Ldsp.sas                                                 21:05 Monday, June 26, 2006   */
-    /*                  _                                                                                                       */
-    /*    ___ _ __   __| |                                                                                                      */
-    /*   / _ \ `_ \ / _` |                                                                                                      */
-    /*  |  __/ | | | (_| |                                                                                                      */
-    /*   \___|_| |_|\__,_|                                                                                                      */
+    /*                                                 .\zip   -->  Zip files                                                   */
     /*                                                                                                                          */
     /*                                                                                                                          */
     /**************************************************************************************************************************/*/
@@ -171,13 +127,13 @@
     /*                                                                                                                          */
     /*         root         =d:/abc         --> either d:/abc for development or p:/abc for production                          */
     /*         meta         =0              --> set to 1 to  parse mock for meta data                                           */
-    /*         program      =abc_050Ldsp    --> must match the souce program in the mock. Must have prefix abc                  */
+    /*         program      =abc_050ldsp    --> must match the souce program in the mock. Must have prefix abc                  */
     /*                                                                                                                          */
     /*         program_type =l              --> sets up the correct enviornment for listings tables graphs sdtm                 */
     /*                                      --> l=list,rtf t=table.rtf g=graph.png s=sdtm a=adam                                */
     /*         user_macros  =0              --> 0 to turn off user macro library                                                */
     /*         debug        =1              --> set to 0 for production                                                         */
-    /*         mocks        =d:\abc\doc\abc_mocks.docx  --> location of mocks ' /                                               */
+    /*         mocks        =0              --> d:\abc\doc\abc_mocks.docx  --> location of mocks '                              */
     /*                                                                                                                          */
     /*   2. Declare global RTF symbols ie   <= >=                                                                               */
     /*                                                                                                                          */
@@ -201,8 +157,44 @@
     /*                                                                                                                          */
     /*  10. Add dimesion variable program name to each record in the mocks.                                                     */
     /*      This allows us to display just the mock of interest                                                                 */
+    /*  ..                                                                                                                      */
     /*                                                                                                                          */
+    /* KEY PRINT OUTPUT WHEN ARGUMENT META=1                                                                                    */
     /*                                                                                                                          */
+    /* This init program can parse the mock listings for titles, footnotes and columnm headings.                                */
+    /* The meta data appears in the output window and can easily be cut and pasted in to table, listing or report program.      */
+    /* Frequently this meta data can be used for arguments to standard macros.                                                  */
+    /*                                                                                                                          */
+    /* Here is an example of what the output window might look like.                                                            */
+    /*                    _   _     _                      _                                                                    */
+    /*   _   _ ___  ___  | |_| |__ (_)___   _ __ ___   ___| |_ __ _                                                             */
+    /*  | | | / __|/ _ \ | __| `_ \| / __| | `_ ` _ \ / _ \ __/ _` |                                                            */
+    /*  | |_| \__ \  __/ | |_| | | | \__ \ | | | | | |  __/ || (_| |                                                            */
+    /*   \__,_|___/\___|  \__|_| |_|_|___/ |_| |_| |_|\___|\__\__,_|                                                            */
+    /*              _                     _                   _                                                                 */
+    /*    ___ _   _| |_    __ _ _ __   __| |  _ __   __ _ ___| |_ ___                                                           */
+    /*   / __| | | | __|  / _` | `_ \ / _` | | `_ \ / _` / __| __/ _ \                                                          */
+    /*  | (__| |_| | |_  | (_| | | | | (_| | | |_) | (_| \__ \ ||  __/                                                          */
+    /*   \___|\__,_|\__|  \__,_|_| |_|\__,_| | .__/ \__,_|___/\__\___|                                                          */
+    /*                                       |_|                                                                                */
+    /* abc_050Ldsp Protocol: ABC Pharmaceuticals                                                               Page 1 of n      */
+    /* abc_050Ldsp Population: All Subjects                                                                                     */
+    /* abc_050Ldsp Template 1                                                                                                   */
+    /* abc_050Ldsp Summary of Populations[1]                                                                                    */
+    /* abc_050Ldsp Xanomeline                                                                                                   */
+    /* abc_050Ldsp                            Placebo       Low Dose        High Dose        Total                              */
+    /* abc_050Ldsp Population                 (N=xxx)        (N=xxx)         (N=xxx)        (N=xxx)                             */
+    /* abc_050Ldsp Intent-To-Treat (ITT)     xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
+    /* abc_050Ldsp Safety                    xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
+    /* abc_050Ldsp Efficacy                  xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
+    /* abc_050Ldsp Completer Week 24         xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
+    /* abc_050Ldsp Complete Study            xxx (xx%)      xxx (xx%)       xxx (xx%)      xxx (xx%)                            */
+    /* abc_050Ldsp [1] Phase I Intravenous Infusion                                                                             */
+    /* abc_050Ldsp NOTE: N in column headers represents number of subjects the in study (i.e., signed informed consent). The    */
+    /* abc_050Ldsp ITT population includes all subjects randomized. The Safety population includes all randomized subjects      */
+    /* abc_050Ldsp to have taken at least one dose of the study drug. The Efficacy population includes all subjects in the      */
+    /* abc_050Ldsp safety population who also have at least one post-baseline ADAS-Cog and CIBIC+ assessment.                   */
+    /* abc_050Ldsp Source: p:/abc/abc_050Ldsp.sas                                                 21:05 Monday, June 26, 2006   */
     /************************************************************************************************************************** */
     /*                                                                                                                          */
     /* VERSION HISTORY                                                                                                          */
@@ -212,6 +204,7 @@
     /*   roger.deangelis@westat.com           2022/05/28         Creation                                                       */
     /*                                                                                                                          */
     /****************************************************************************************************************************/
+
     ;;;;
 
     %macro abc_000Init(
