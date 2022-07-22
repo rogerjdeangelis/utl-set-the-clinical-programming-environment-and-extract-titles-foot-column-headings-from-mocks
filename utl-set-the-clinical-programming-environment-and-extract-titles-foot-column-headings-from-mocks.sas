@@ -31,6 +31,8 @@ This is under development
 /* FORMATS:                 d:abc\fmt\abcfmt.sas7cat                                                                        */
 /*                                                                                                                          */
 /* VALIDATED:               YES                                                                                             */
+/*                                                                                                                          */                    
+/* SDTMIG                 : SDTNIG 3.4                                                                                      */
 /*                                                                                                                          */
 /* RISK LEVEL:              High                                                                                            */
 /*                                                                                                                          */
