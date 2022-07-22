@@ -29,6 +29,8 @@
     /* FORMATS                : d:abc\fmt\abcFmt.sas7bdat                                                                       */
     /*                                                                                                                          */
     /* VALIDATED              : YES                                                                                             */
+    /*                                                                                                                          */                    
+    /* SDTMIG                 : SDTNIG 3.4                                                                                      */
     /*                                                                                                                          */
     /* RISK LEVEL             : High                                                                                            */
     /*                                                                                                                          */
