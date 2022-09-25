@@ -10,6 +10,11 @@ This is under development
 /* Study token=abc                                                                                                          */
 /*                                                                                                                          */
 /* PROGRAM:                 abc_000Init.sas                                                                                 */
+/*                                                                                                                          */     
+/* LANGUAGE:              : SAS 9.4M7 64bit or WPS 4.2 64bit                                                                */     
+/*                                                                                                                          */     
+/* OPSYS;                 : Win 10 64bit worstation                                                                         */     
+/*                                                                                                                          */     
 /* PROGRAM PATH:            d:/abc/oto/   (production AWS:/abc)                                                             */
 /*                                                                                                                          */
 /* PURPOSE:                 Create Programming Enviromment for ABC-217 Trial mRNAGen Incorporated                           */
