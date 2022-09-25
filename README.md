@@ -10,7 +10,11 @@
     /*                                                                                                                          */
     /* PROGRAM                : abc_000Init.sas                                                                                 */
     /* PROGRAM PATH           : d:/abc/oto/   (production AWS:/abc)                                                             */
-    /*                                                                                                                          */
+    /*                                                                                                                          */   
+    /* LANGUAGE:              : SAS 9.4M7 64bit or WPS 4.2 64bit                                                                */   
+    /*                                                                                                                          */   
+    /* OPSYS;                 : Win 10 64bit worstation                                                                         */   
+    /*                                                                                                                          */   
     /* PURPOSE                : Create Programming Enviromment for ABC-217 Trial mRNAGen Incorporated                           */
     /*                                                                                                                          */
     /* TRIAL                  : ABC-217                                                                                         */
